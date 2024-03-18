@@ -1,0 +1,4 @@
+1. add to github
+2. create a seperate develop branch
+3. update readme.md
+4. find a suitable logo
