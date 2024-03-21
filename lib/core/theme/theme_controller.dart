@@ -9,8 +9,8 @@ final themecontrollerProvider =
   name: 'themecontrollerProvider',
 );
 
-///This controller class used change theme and
-///get the intial theme from storage if its available
+///This controller class is used to change theme and
+///get the initial theme from storage if its available
 class ThemeModeController extends AutoDisposeNotifier<ThemeMode> {
   final _themeKey = "theme";
 

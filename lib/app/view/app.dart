@@ -62,8 +62,7 @@ class _AppState extends ConsumerState<App> with GlobalHelper {
           final mediaquery = MediaQuery.of(context);
           child = MediaQuery(
             data: mediaquery.copyWith(
-              textScaler:
-                  TextScaler.linear(mediaquery.textScaleFactor.clamp(0, 1)),
+              textScaler: TextScaler.linear(mediaquery.textScaleFactor.clamp(0, 1)),
             ),
             child: child,
           );
