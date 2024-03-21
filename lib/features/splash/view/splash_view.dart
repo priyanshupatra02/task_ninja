@@ -66,8 +66,7 @@ class _SplashViewState extends ConsumerState<SplashView> {
           futureInitializerPod,
           (previous, next) {
             if (next is AsyncData && next.valueOrNull != null) {
-              talker.info(
-                  "Initialization takes ${stopwatch.elapsedMilliseconds}");
+              talker.info("Initialization takes ${stopwatch.elapsedMilliseconds}");
               widget.onInitialized(next.requireValue);
             }
           },
@@ -94,8 +93,7 @@ class LoaderChild extends StatefulWidget {
   State<LoaderChild> createState() => _LoaderChildState();
 }
 
-class _LoaderChildState extends State<LoaderChild>
-    with TickerProviderStateMixin {
+class _LoaderChildState extends State<LoaderChild> with TickerProviderStateMixin {
   late final AnimationController _controller = AnimationController(
     duration: const Duration(seconds: 2),
     vsync: this,
@@ -112,38 +110,36 @@ class _LoaderChildState extends State<LoaderChild>
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Container(
-        color: Colors.white,
-        child: Stack(
-          alignment: AlignmentDirectional.center,
-          children: [
-            Center(
-              child: RotationTransition(
-                turns: _animation,
-                child: const FlutterLogo(
-                  size: 100,
-                ),
+    return Container(
+      color: Colors.white,
+      child: Stack(
+        alignment: AlignmentDirectional.center,
+        children: [
+          Center(
+            child: RotationTransition(
+              turns: _animation,
+              child: const FlutterLogo(
+                size: 100,
               ),
             ),
-            const Positioned(
-              bottom: 44,
-              child: CircularProgressIndicator(
-                color: Colors.amber,
+          ),
+          const Positioned(
+            bottom: 44,
+            child: CircularProgressIndicator(
+              color: Colors.amber,
+            ),
+          ),
+          const Positioned(
+            bottom: 16,
+            child: Material(
+                child: Text(
+              "Welcome to Riverpod Simple Architecture App",
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
               ),
-            ),
-            const Positioned(
-              bottom: 16,
-              child: Material(
-                  child: Text(
-                "Welcome to Riverpod Simple Architecture App",
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                ),
-              )),
-            ),
-          ],
-        ),
+            )),
+          ),
+        ],
       ),
     );
   }
