@@ -35,6 +35,7 @@ class Themes {
         textSelectionTheme: const TextSelectionThemeData(
           cursorColor: Colors.black,
         ),
+        
       );
 
   static ThemeData get darkTheme => FlexThemeData.dark(
@@ -44,6 +45,7 @@ class Themes {
         scaffoldBackground: const Color(0xFF0C0C0C),
         appBarStyle: FlexAppBarStyle.background,
         appBarOpacity: 0.0,
+        appBarElevation: 0.0,
         tabBarStyle: FlexTabBarStyle.forBackground,
         subThemesData: const FlexSubThemesData(
           blendOnLevel: 30,
@@ -68,6 +70,10 @@ class Themes {
       ).copyWith(
         textSelectionTheme: const TextSelectionThemeData(
           cursorColor: Colors.white,
+        ),
+        floatingActionButtonTheme: const FloatingActionButtonThemeData(
+          foregroundColor: Colors.black,
+          backgroundColor: Colors.white,
         ),
       );
 // If you do not have a themeMode switch, uncomment this line
