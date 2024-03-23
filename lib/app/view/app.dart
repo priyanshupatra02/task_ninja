@@ -34,9 +34,12 @@ class _AppState extends ConsumerState<App> with GlobalHelper {
     return MaterialApp.router(
       debugShowCheckedModeBanner: false,
       title: 'Example App',
-      theme: Themes.theme,
-      darkTheme: Themes.darkTheme,
+      theme: Themes.darkTheme,
+      //remove the above line and uncomment the below line to use light & dark theme
+      // theme: Themes.theme,
+      // darkTheme: Themes.darkTheme,
       themeMode: currentTheme,
+
       routerConfig: approuter.config(
         placeholder: (context) => const SizedBox.shrink(),
         navigatorObservers: () => [

@@ -25,7 +25,21 @@ class TodosGridView extends StatelessWidget {
         return FrostedGlassBox(
           width: double.infinity,
           height: double.infinity,
-          child: 'Task $index'.text.make(),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              //mark as completed
+              // const Align(
+              //   alignment: Alignment.topRight,
+              //   child: Icon(
+              //     Icons.circle_outlined,
+              //     color: Colors.white54,
+              //   ),
+              // ).p16(),
+
+              'Task $index'.text.color(Colors.white54).normal.make(),
+            ],
+          ),
         );
       },
     );

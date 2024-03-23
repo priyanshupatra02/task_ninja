@@ -16,7 +16,7 @@ class TodosHeader extends StatelessWidget {
       children: [
         headerIcon.objectCenterLeft(),
         10.widthBox,
-        headername.text.color(Colors.grey.withOpacity(0.5)).xl2.bold.make(),
+        headername.text.color(Colors.white).xl2.bold.make(),
       ],
     );
   }

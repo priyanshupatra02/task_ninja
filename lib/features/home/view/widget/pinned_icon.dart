@@ -12,7 +12,7 @@ class PinnedIcon extends StatelessWidget {
     return SvgPicture.asset(
       R.ASSETS_ICONS_PINNED_ICON_SVG,
       height: 20,
-      colorFilter: ColorFilter.mode(Colors.grey.withOpacity(0.5), BlendMode.srcIn),
+      colorFilter: const ColorFilter.mode(Colors.white, BlendMode.srcIn),
       fit: BoxFit.scaleDown,
     );
   }
