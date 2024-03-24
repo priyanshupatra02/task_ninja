@@ -28,13 +28,7 @@ class _HomeViewState extends State<HomeView> {
   Widget build(BuildContext context) {
     return Scaffold(
       extendBodyBehindAppBar: true,
-      appBar: AppBar(
-        foregroundColor: Colors.transparent,
-        shadowColor: Colors.transparent,
-        backgroundColor: Colors.transparent,
-        surfaceTintColor: Colors.transparent,
-
-      ),
+      appBar: AppBar(),
       drawer: const GlassmorphicDrawer(),
       floatingActionButton: const FAB(),
       body: Stack(

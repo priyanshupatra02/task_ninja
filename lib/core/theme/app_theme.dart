@@ -35,7 +35,6 @@ class Themes {
         textSelectionTheme: const TextSelectionThemeData(
           cursorColor: Colors.black,
         ),
-        
       );
 
   static ThemeData get darkTheme => FlexThemeData.dark(
@@ -46,6 +45,8 @@ class Themes {
         appBarStyle: FlexAppBarStyle.background,
         appBarOpacity: 0.0,
         appBarElevation: 0.0,
+        appBarBackground: Colors.transparent,
+        surfaceTint: Colors.transparent,
         tabBarStyle: FlexTabBarStyle.forBackground,
         subThemesData: const FlexSubThemesData(
           blendOnLevel: 30,
