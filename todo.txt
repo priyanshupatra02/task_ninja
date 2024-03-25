@@ -1,4 +1,9 @@
-1. add a logo
+1. add a logo ✅
 2. Set theme color
 3. update readme.md
 4. find a suitable logo
+5. font file
+6. color code file
+7. filter todos according to today, yesterday, completed and pending
+8. Animate drawer
+9. Add api's

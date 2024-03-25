@@ -11,5 +11,9 @@ class AppRouter extends $AppRouter {
       path: '/',
       initial: true,
     ),
+    AutoRoute(
+      page: CounterRoute.page,
+      path: '/counter-page',
+    ),
   ];
 }
