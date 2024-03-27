@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:task_ninja/features/home/view/widget/close_drawer_button.dart';
 
 class GlassmorphicDrawer extends StatelessWidget {
   const GlassmorphicDrawer({
@@ -14,35 +15,15 @@ class GlassmorphicDrawer extends StatelessWidget {
       child: Container(
         width: double.infinity,
         color: Colors.transparent,
-        child: Center(
+        child: const Center(
           child: SafeArea(
             child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 15.0),
+              padding: EdgeInsets.symmetric(horizontal: 15.0),
               child: Column(
-                // mainAxisAlignment: MainAxisAlignment.center,
+                // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 mainAxisSize: MainAxisSize.max,
                 children: [
-                  Align(
-                    alignment: Alignment.topLeft,
-                    child: GestureDetector(
-                      onTap: () => Navigator.of(context).pop(),
-                      child: const Icon(
-                        Icons.close,
-                        size: 40.0,
-                      ),
-                    ),
-                  ),
-                  const Spacer(),
-                  Align(
-                    alignment: Alignment.bottomLeft,
-                    child: GestureDetector(
-                      onTap: () => Navigator.of(context).pop(),
-                      child: const Icon(
-                        Icons.settings,
-                        size: 30.0,
-                      ),
-                    ),
-                  ),
+                  CloseDrawerButton(),
                 ],
               ),
             ),

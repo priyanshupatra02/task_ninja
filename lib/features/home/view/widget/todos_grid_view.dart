@@ -28,15 +28,6 @@ class TodosGridView extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              //mark as completed
-              // const Align(
-              //   alignment: Alignment.topRight,
-              //   child: Icon(
-              //     Icons.circle_outlined,
-              //     color: Colors.white54,
-              //   ),
-              // ).p16(),
-
               'Task $index'.text.color(Colors.white54).normal.make(),
             ],
           ),
