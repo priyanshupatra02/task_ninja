@@ -1,5 +1,6 @@
 import 'package:flex_color_scheme/flex_color_scheme.dart';
 import 'package:flutter/material.dart';
+import 'package:task_ninja/const/color/app_colors.dart';
 
 ///This class defines light theme and dark theme
 ///Here we used flex color scheme
@@ -33,7 +34,7 @@ class Themes {
         // fontFamily: GoogleFonts.getFont('Lato').fontFamily,
       ).copyWith(
         textSelectionTheme: const TextSelectionThemeData(
-          cursorColor: Colors.black,
+          cursorColor: AppColors.kSecondPrimaryBgColor,
         ),
       );
 
@@ -41,7 +42,7 @@ class Themes {
         colors: _myFlexScheme.dark,
         surfaceMode: FlexSurfaceMode.highScaffoldLowSurface,
         blendLevel: 15,
-        scaffoldBackground: const Color(0xFF0C0C0C),
+        scaffoldBackground: AppColors.kPrimaryBgColor,
         appBarStyle: FlexAppBarStyle.background,
         appBarOpacity: 0.0,
         appBarElevation: 0.0,
@@ -70,11 +71,11 @@ class Themes {
         // fontFamily: GoogleFonts.getFont('Lato').fontFamily,
       ).copyWith(
         textSelectionTheme: const TextSelectionThemeData(
-          cursorColor: Colors.white,
+          cursorColor: AppColors.kSecondaryBgColor,
         ),
         floatingActionButtonTheme: const FloatingActionButtonThemeData(
-          foregroundColor: Colors.black,
-          backgroundColor: Colors.white,
+          foregroundColor: AppColors.kSecondPrimaryBgColor,
+          backgroundColor: AppColors.kSecondaryBgColor,
         ),
       );
 // If you do not have a themeMode switch, uncomment this line

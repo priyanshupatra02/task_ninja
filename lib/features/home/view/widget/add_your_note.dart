@@ -10,7 +10,7 @@ class AddYourNote extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Align(
       alignment: Alignment.topCenter,
-      child: FrostedForm(),
+      child: FrostedTodoForm(),
     );
   }
 }

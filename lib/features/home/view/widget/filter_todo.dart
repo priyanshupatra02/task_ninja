@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:task_ninja/const/color/app_colors.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 class FilterTodo extends StatelessWidget {
@@ -20,10 +21,10 @@ class FilterTodo extends StatelessWidget {
           children: [
             const Icon(
               Icons.filter_list,
-              color: Colors.grey,
+              color: AppColors.kTertiaryBgColor,
             ),
             5.widthBox,
-            'Filter'.text.color(Colors.grey.withOpacity(0.5)).xl.semiBold.make()
+            'Filter'.text.color(AppColors.kTertiaryBgColor.withOpacity(0.5)).xl.semiBold.make()
           ],
         ),
       ),

@@ -4,6 +4,7 @@ import 'package:flash/flash_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:task_ninja/const/color/app_colors.dart';
 import 'package:task_ninja/core/router/auto_route_observer.dart';
 import 'package:task_ninja/core/router/router_pod.dart';
 import 'package:task_ninja/core/theme/app_theme.dart';
@@ -55,7 +56,7 @@ class _AppState extends ConsumerState<App> with GlobalHelper {
           ///Here you can define breakpoint and how the responsive should work
           child = ResponsiveBreakPointWrapper(
             firstFrameWidget: Container(
-              color: Colors.white,
+              color: AppColors.kSecondaryBgColor,
             ),
             child: child!,
           );
@@ -75,22 +76,22 @@ class _AppState extends ConsumerState<App> with GlobalHelper {
           child = AnnotatedRegion<SystemUiOverlayStyle>(
             value: currentTheme == ThemeMode.dark
                 ? SystemUiOverlayStyle.light.copyWith(
-                    statusBarColor: Colors.white.withOpacity(0.4),
-                    systemNavigationBarColor: Colors.black,
-                    systemNavigationBarDividerColor: Colors.black,
+                    statusBarColor: AppColors.kSecondaryBgColor.withOpacity(0.4),
+                    systemNavigationBarColor: AppColors.kSecondPrimaryBgColor,
+                    systemNavigationBarDividerColor: AppColors.kSecondPrimaryBgColor,
                     systemNavigationBarIconBrightness: Brightness.dark,
                   )
                 : currentTheme == ThemeMode.light
                     ? SystemUiOverlayStyle.dark.copyWith(
-                        statusBarColor: Colors.white.withOpacity(0.4),
-                        systemNavigationBarColor: Colors.grey,
-                        systemNavigationBarDividerColor: Colors.grey,
+                        statusBarColor: AppColors.kSecondaryBgColor.withOpacity(0.4),
+                        systemNavigationBarColor: AppColors.kTertiaryBgColor,
+                        systemNavigationBarDividerColor: AppColors.kTertiaryBgColor,
                         systemNavigationBarIconBrightness: Brightness.light,
                       )
                     : SystemUiOverlayStyle.dark.copyWith(
-                        statusBarColor: Colors.white.withOpacity(0.4),
-                        systemNavigationBarColor: Colors.grey,
-                        systemNavigationBarDividerColor: Colors.grey,
+                        statusBarColor: AppColors.kSecondaryBgColor.withOpacity(0.4),
+                        systemNavigationBarColor: AppColors.kTertiaryBgColor,
+                        systemNavigationBarDividerColor: AppColors.kTertiaryBgColor,
                         systemNavigationBarIconBrightness: Brightness.light,
                       ),
             child: GestureDetector(

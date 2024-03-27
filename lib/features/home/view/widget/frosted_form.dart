@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:task_ninja/const/color/app_colors.dart';
 import 'package:task_ninja/features/home/view/widget/frosted_glass_box.dart';
 
-class FrostedForm extends StatelessWidget {
-  const FrostedForm({
+class FrostedTodoForm extends StatelessWidget {
+  const FrostedTodoForm({
     super.key,
   });
 
@@ -21,7 +22,7 @@ class FrostedForm extends StatelessWidget {
             onTap: () {},
             style: GoogleFonts.inter(
               fontSize: 16,
-              color: Colors.white.withOpacity(0.7),
+              color: AppColors.kSecondPrimaryBgColor.withOpacity(0.7),
               fontWeight: FontWeight.bold,
             ),
             minLines: 3,
@@ -36,10 +37,10 @@ class FrostedForm extends StatelessWidget {
               fillColor: Colors.transparent,
               hintStyle: TextStyle(
                 fontSize: 16,
-                color: Colors.black.withOpacity(0.5),
+                color: AppColors.kSecondPrimaryBgColor.withOpacity(0.5),
                 fontWeight: FontWeight.bold,
               ),
-              errorStyle: const TextStyle(color: Colors.orange),
+              errorStyle: const TextStyle(color: AppColors.kErrorColor),
               enabledBorder: OutlineInputBorder(
                 borderSide: const BorderSide(color: Colors.transparent),
                 borderRadius: BorderRadius.circular(8),
@@ -49,11 +50,11 @@ class FrostedForm extends StatelessWidget {
                 borderRadius: BorderRadius.circular(8),
               ),
               errorBorder: OutlineInputBorder(
-                borderSide: const BorderSide(color: Colors.red, width: 1.0),
+                borderSide: const BorderSide(color: AppColors.kErrorColor, width: 1.0),
                 borderRadius: BorderRadius.circular(8),
               ),
               focusedErrorBorder: OutlineInputBorder(
-                borderSide: const BorderSide(color: Colors.red, width: 1.0),
+                borderSide: const BorderSide(color: AppColors.kErrorColor, width: 1.0),
                 borderRadius: BorderRadius.circular(8),
               ),
             ),

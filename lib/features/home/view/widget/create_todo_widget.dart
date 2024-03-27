@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:task_ninja/const/color/app_colors.dart';
 import 'package:task_ninja/features/home/view/widget/create_todo_button.dart';
 import 'package:task_ninja/features/home/view/widget/todos_form.dart';
 import 'package:velocity_x/velocity_x.dart';
@@ -20,7 +21,7 @@ class CreateTodoWidget extends StatelessWidget {
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(30),
           border: Border.all(
-            color: Colors.white.withOpacity(0.13),
+            color: AppColors.kSecondPrimaryBgColor.withOpacity(0.13),
           ),
         ),
         child: Column(

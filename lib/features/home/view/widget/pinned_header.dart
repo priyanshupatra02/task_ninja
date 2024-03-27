@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:task_ninja/const/color/app_colors.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 class TodosHeader extends StatelessWidget {
@@ -16,7 +17,7 @@ class TodosHeader extends StatelessWidget {
       children: [
         headerIcon.objectCenterLeft(),
         10.widthBox,
-        headername.text.color(Colors.white).xl2.bold.make(),
+        headername.text.color(AppColors.kSecondaryBgColor).xl2.bold.make(),
       ],
     );
   }

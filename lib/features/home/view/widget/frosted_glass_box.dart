@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:task_ninja/const/color/app_colors.dart';
 
 class FrostedGlassBox extends StatelessWidget {
   const FrostedGlassBox(
@@ -38,14 +39,14 @@ class FrostedGlassBox extends StatelessWidget {
             Container(
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(30),
-                border: Border.all(color: Colors.white.withOpacity(0.13)),
+                border: Border.all(color: AppColors.kSecondaryBgColor.withOpacity(0.13)),
                 gradient:
                     LinearGradient(begin: Alignment.topLeft, end: Alignment.bottomRight, colors: [
                   //begin color
-                  Colors.white.withOpacity(0.15),
+                  AppColors.kSecondaryBgColor.withOpacity(0.15),
                   //end color
-                  Colors.white.withOpacity(0.05),
-                ]),
+                  AppColors.kSecondaryBgColor.withOpacity(0.05),
+                ],),
               ),
             ),
             //child ==> the first/top layer of stack
